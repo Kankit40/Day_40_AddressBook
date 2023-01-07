@@ -186,3 +186,4 @@ function contactChecker(firstNamedelete, check) {
 
 }
 printArray();
+
