@@ -1,17 +1,15 @@
-//Ability to create a Address Book Contact with first and last names, address, city, state, zip, phone number and email...
 
-class Contact{
-    constructor(firstName, lastName, address, city, state, zip, phoneNo,email){
+class Contacts {
+    constructor(firstName, lastName, address, city, state, zip, phoneNumber, email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.city = city;
         this.state = state;
         this.zip = zip;
-        this.phoneNo = phoneNo;
+        this.phoneNumber = phoneNumber;
         this.email = email;
     }
-
     set firstName(firstName) {
         let pattern = RegExp('^[A-Z]{1}[a-z]{2,}$');
         if(pattern.test(firstName)) {
@@ -101,23 +99,23 @@ class Contact{
     get email() {
         return this._email;
     }
-
-    toString(){
-        return "First Name= "+ this.firstName
-            + " Last Name= "+ this.lastName
-            + " Address= "+ this.address
-            + " City= "+ this.city
-            + " State= "+ this.state
-            + " Zip= "+ this.zip
-            + " Phone No= "+ this.phoneNo
-            + " Email = "+ this.email;
+    toString() {
+        return "First Name= " + this.firstName
+            + " Last Name= " + this.lastName
+            + " Address= " + this.address
+            + " City= " + this.city
+            + " State= " + this.state
+            + " Zip= " + this.zip
+            + " Phone Number = " + this.phoneNumber
+            + " Email = " + this.email;
     }
 }
 
-try{
-    let contact1 = new Contact("Ankit","Kumar","OldFbd","Faridabad","Haryana","121002","8989898989","Kanki@gm.com");
-    console.log(contact1.toString());
-
-} catch(e) {
-    console.log(e);
-}
+    //UC3: Creating array of contacts
+    let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
+    new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
+    new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
+   
+    for(let i=0; i<arr.length; i++){
+        console.log(arr[i].toString());
+    }
