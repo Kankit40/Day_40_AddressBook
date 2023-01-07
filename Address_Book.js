@@ -113,3 +113,62 @@ class Contacts {
 }
 
 //UC3: Creating array of contacts
+let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
+new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
+new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i].toString());
+}
+console.log("-------------------------");
+//UC4: Editing contacts using the name
+function editContacts(contact) {
+    let firstName = prompt4("Enter the First Name is:");
+    contact.firstName = firstName;
+    let lastName = prompt4("Enter the last Name is:");
+    contact.lastName = lastName;
+    let address = prompt4("Enter your Address:");
+    contact.address = address;
+    let city = prompt4("Enter your City:");
+    contact.city = city;
+    let state = prompt4("Enter your State:");
+    contact.state = state;
+    let zip = prompt4("Enter your Zip:");
+    contact.zip = zip;
+    let pn = prompt4("Enter your phoneNumber:");
+    contact.phoneNumber = pn;
+    let emailaddress = prompt4("Enter your Email Address:");
+    contact.email = emailaddress;
+    contact = new Contacts(firstName, lastName, address, city, state, zip, pn, emailaddress);
+}
+let firstNameedit = prompt4("Enter the First Name you like to edit:");
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i]._firstName == firstNameedit) {
+        console.log("Print matched: " + arr[i].toString());
+        editContacts(arr[i]);
+        console.log("Print matched: " + arr[i].toString());
+    }
+}
+printArray();
+
+function printArray() {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i].toString());
+    }
+}
+=======
+    let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
+    new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
+    new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
+   
+    for(let i=0; i<arr.length; i++){
+        console.log(arr[i].toString());
+    }
+=======
+try{
+    let contact1 = new Contact("Ankit","Kumar","OldFbd","Faridabad","Haryana","121002","8989898989","Kanki@gm.com");
+    console.log(contact1.toString());
+
+} catch(e) {
+    console.log(e);
+    
+}
