@@ -112,10 +112,12 @@ class Contacts {
     }
 }
 
+
 //UC3: Creating array of contacts
 let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
 new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
 new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
+
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i].toString());
 }
@@ -151,7 +153,34 @@ for (let i = 0; i < arr.length; i++) {
 printArray();
 
 function printArray() {
+    console.log("Printing all the contacts:")
     for (let i = 0; i < arr.length; i++) {
         console.log(arr[i].toString());
     }
 }
+deleteContacts();
+function deleteContacts() {
+    let firstNamedelete = prompt4("Enter the First Name you like to delete:");
+    let check = true;
+    check = contactChecker(firstNamedelete, check);
+    if (check) {
+        console.log("Sorry there is no name with this first name.");
+    } else {
+        console.log("Contact is deleted sucessfully!")
+    }
+
+}
+function contactChecker(firstNamedelete, check) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]._firstName == firstNamedelete) {
+            check = false;
+            console.log("Print matched: " + arr[i].toString());
+            let deleted = arr.splice(i, 1);
+            console.log("Deleted element: " + deleted);
+            return check;
+        }
+        return check;
+    }
+
+}
+printArray();
