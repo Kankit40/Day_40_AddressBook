@@ -160,6 +160,7 @@ function printArray() {
         console.log(arr[i].toString());
     }
 }
+//UC5: delete contacts
 deleteContacts();
 function deleteContacts() {
     let firstNamedelete = prompt4("Enter the First Name you like to delete:");
