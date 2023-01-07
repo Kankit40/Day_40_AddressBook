@@ -111,12 +111,14 @@ class Contacts {
             + " Email = " + this.email;
     }
 }
-
+// UC1:Adding the contact in the address Book
+// let contact1 = new Contacts("Sahil", "Khan", "Ambazari", "Nagpur", "MHGJ", "447141", "987962080", "sahil@gmail.com");
+//console.log(contact1.toString());
 
 //UC3: Creating array of contacts
-let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
-new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
-new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
+let arr = new Array(new Contacts("Sahil", "Khan", "Ambazari", "Nagpur", "MHGJ", "447141", "987962080", "sahil@gmail.com"),
+    new Contacts("Saurav", "Abc", "Colony", "Banglore", "UPKJ", "447554", "887962080", "saurav@gmail.com"),
+    new Contacts("Ankit", "Xyz", "Patna", "Delhi", "WBDL", "541441", "123962080", "ankit@gmail.com"));
 
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i].toString());
@@ -184,9 +186,4 @@ function contactChecker(firstNamedelete, check) {
 
 }
 printArray();
-let count=countContacts();
-console.log("total count of contacts are: "+count)
-function countContacts(){
-    return arr.map(contact => contact._firstName)
-    .reduce((start,firstName)=>start+=1,0);
-}
+
