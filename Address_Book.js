@@ -111,7 +111,9 @@ class Contacts {
             + " Email = " + this.email;
     }
 }
-
+// UC1:Adding the contact in the address Book
+// let contact1 = new Contacts("Sahil", "Khan", "Ambazari", "Nagpur", "MHGJ", "447141", "987962080", "sahil@gmail.com");
+//console.log(contact1.toString());
 
 //UC3: Creating array of contacts
 let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
