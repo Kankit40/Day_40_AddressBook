@@ -1,4 +1,5 @@
-
+const ps4 = require("prompt-sync");
+const prompt4 = ps4();
 class Contacts {
     constructor(firstName, lastName, address, city, state, zip, phoneNumber, email) {
         this.firstName = firstName;
@@ -12,7 +13,7 @@ class Contacts {
     }
     set firstName(firstName) {
         let pattern = RegExp('^[A-Z]{1}[a-z]{2,}$');
-        if(pattern.test(firstName)) {
+        if (pattern.test(firstName)) {
             this._firstName = firstName;
         } else {
             throw "First Name is invalid.";
@@ -24,7 +25,7 @@ class Contacts {
 
     set lastName(lastName) {
         let pattern = RegExp('^[A-Z]{1}[A-Za-z]{2,}$');
-        if(pattern.test(lastName)) {
+        if (pattern.test(lastName)) {
             this._lastName = lastName
         } else {
             throw "Last Name is invalid.";
@@ -36,8 +37,8 @@ class Contacts {
 
     set address(address) {
         let pattern = RegExp('^[A-Za-z]{4,}$');
-        if(pattern.test(address)) {
-          this._address = address;  
+        if (pattern.test(address)) {
+            this._address = address;
         } else throw "Address Must have 4 Characters";
     }
 
@@ -47,7 +48,7 @@ class Contacts {
 
     set city(city) {
         let pattern = RegExp('^[A-Za-z]{4,}$');
-        if(pattern.test(city)) {
+        if (pattern.test(city)) {
             this._city = city;
         } else throw "State Must have 4 Characters";
     }
@@ -58,7 +59,7 @@ class Contacts {
 
     set state(state) {
         let pattern = RegExp('^[A-Za-z]{4,}$');
-        if(pattern.test(state)) {
+        if (pattern.test(state)) {
             this._state = state;
         } else throw "State Must have 4 Charactes";
     }
@@ -67,20 +68,20 @@ class Contacts {
         return this._state;
     }
 
-    set zip(zip){
+    set zip(zip) {
         let Pattern = RegExp('^[0-9]{6}$');
-        if(Pattern.test(zip)) {
+        if (Pattern.test(zip)) {
             this._zip = zip;
         } else throw 'Zip Code must be of 6 digits.';
     }
 
-    get zip(){
+    get zip() {
         return this._zip;
     }
 
     set phoneNo(phoneNo) {
         let Pattern = RegExp('^[0-9]{2}|\s|[0-9]{10}$');
-        if(Pattern.test(phoneNo)) {
+        if (Pattern.test(phoneNo)) {
             this._phoneno = phoneNo;
         } else throw 'Invalid Phone Number.';
     }
@@ -89,9 +90,9 @@ class Contacts {
         return this._phoneno;
     }
 
-    set email(email){
+    set email(email) {
         let Pattern = RegExp('^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$');
-        if(Pattern.test(email)){
+        if (Pattern.test(email)) {
             this._email = email;
         } else throw "Invalid Email ID";
     }
@@ -112,19 +113,3 @@ class Contacts {
 }
 
 //UC3: Creating array of contacts
-    let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
-    new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
-    new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
-   
-    for(let i=0; i<arr.length; i++){
-        console.log(arr[i].toString());
-    }
-=======
-try{
-    let contact1 = new Contact("Ankit","Kumar","OldFbd","Faridabad","Haryana","121002","8989898989","Kanki@gm.com");
-    console.log(contact1.toString());
-
-} catch(e) {
-    console.log(e);
-    
-}
