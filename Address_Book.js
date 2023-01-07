@@ -112,10 +112,12 @@ class Contacts {
     }
 }
 
+
 //UC3: Creating array of contacts
 let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
 new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
 new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
+
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i].toString());
 }
@@ -151,24 +153,9 @@ for (let i = 0; i < arr.length; i++) {
 printArray();
 
 function printArray() {
+    console.log("Printing all the contacts:")
     for (let i = 0; i < arr.length; i++) {
         console.log(arr[i].toString());
     }
 }
-=======
-    let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
-    new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
-    new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
-   
-    for(let i=0; i<arr.length; i++){
-        console.log(arr[i].toString());
-    }
-=======
-try{
-    let contact1 = new Contact("Ankit","Kumar","OldFbd","Faridabad","Haryana","121002","8989898989","Kanki@gm.com");
-    console.log(contact1.toString());
 
-} catch(e) {
-    console.log(e);
-    
-}
