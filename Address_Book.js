@@ -29,4 +29,5 @@ try{
     console.log(contact1.toString());
 } catch(e) {
     console.log(e);
+    
 }
