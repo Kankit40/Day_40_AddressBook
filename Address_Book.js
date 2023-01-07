@@ -110,12 +110,3 @@ class Contacts {
             + " Email = " + this.email;
     }
 }
-
-    //UC3: Creating array of contacts
-    let arr=new Array(new Contacts("Amit", "Kumar", "Padam", "Ballabgarh", "Haryana", "121004", "0898989899", "Kankit@gm.com"), 
-    new Contacts("Ankush", "Kumar", "Sector", "Palwal", "Haryana", "121007", "0898969899", "Kankit@gm2.com"),
-    new Contacts("Sumit", "Sharma", "Sector", "OldFaridabad", "Haryana", "121504", "0798989899", "Kankit@gm3.com"));
-   
-    for(let i=0; i<arr.length; i++){
-        console.log(arr[i].toString());
-    }
